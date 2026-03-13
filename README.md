@@ -72,14 +72,16 @@ All API endpoints are available under:
 
 * Users authenticate via `/api/login`
 * Successful login returns a Base64-encoded session token
-* The token must be sent in the `Authorization` header for secured endpoints
+* The token must be sent in the request body for secured endpoints
 * Passwords are encrypted using BCrypt
 * Session tokens expire after 3 minutes of inactivity
 
-Example header:
+Example request body:
 
 ```
-Authorization: Basic <session_token>
+}
+"token" : "session_token"
+}
 ```
 
 ---

@@ -72,6 +72,8 @@ public class SecurityConfig {
                         .requestMatchers(mvcMatcherBuilder.pattern(HttpMethod.GET, "/api/users")).authenticated()
                         .requestMatchers(mvcMatcherBuilder.pattern(HttpMethod.PUT, "/api/users")).permitAll()
 
+                        .requestMatchers(mvcMatcherBuilder.pattern(HttpMethod.GET, "/api/health")).permitAll()
+
                         .requestMatchers(mvcMatcherBuilder.pattern("/api/**")).authenticated()
 
                         .anyRequest().permitAll()
